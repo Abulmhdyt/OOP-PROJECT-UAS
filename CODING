@@ -1,31 +1,39 @@
 #include <iostream>
-#include <stdio.h>
 #include <conio.h>
 using namespace std;
 
-class luasSegitia
-{
-public:
- int alas, tinggi;
- float luas;
+class kotak{
 
- int hitungLuas(){
-  luas = 0.5 * alas * tinggi;
- }
- 
+public :
+		double panjang;
+		double lebar;
+		double tinggi;
+			void print(){
+			cout<<"Cetak Objek Kotak"<<endl;
+		}
 };
 
 int main()
 
 {
- luasSegitia st;
 
- cout<<"Masukan Alas   :";cin>>st.alas;
- cout<<"Masukan Tinggi :";cin>>st.tinggi;
-
- st.hitungLuas(); // Menghitung Luas Segitiga
-
- cout<<"Luas Segitiga  :"<<st.luas;
-
- getch();
+		kotak kotakmawar, kotakmelati;
+		double Volume = 0.0;
+		
+		kotakmawar.tinggi	= 3.0;
+		kotakmawar.panjang	= 7.0;
+		kotakmawar.lebar		= 5.0;
+		
+		kotakmelati.tinggi		= 4.0;
+		kotakmelati.panjang	= 8.0;
+		kotakmelati.lebar		= 6.0;
+		
+		Volume = kotakmawar.tinggi * kotakmawar.panjang * kotakmawar.lebar;
+		cout<<"Volume dari box mawar :  "<< Volume <<endl;
+		
+		Volume = kotakmelati.tinggi * kotakmelati.panjang * kotakmelati.lebar;
+		cout<<"Volume dari box melati :  "<< Volume <<endl;
+		
+		getch();
+		
 }
